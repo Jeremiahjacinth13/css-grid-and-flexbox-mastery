@@ -44,6 +44,10 @@ body{
   background-color: var(--backgroundColor);
 }
 
+div > div{
+  display: flex;
+  gap: 1.5em;
+}
 button{
   background-color: var(--buttonColor);
   padding: 1.5em;
