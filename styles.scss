@@ -20,25 +20,25 @@ body{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-color: black;
+    // background-color: black;
     justify-content: space-between;
-    --animationDuration: 700ms;
+    --animationDuration: 400ms;
 
     .block{
         height: inherit;
-        background-color: darkgreen;
+        background-color: rgb(6, 102, 126);
         flex-basis: 33.33%;
 
         &:nth-of-type(1){
-            animation: blockAnimation calc(var(--animationDuration) * 2) var(--animationDuration) ease-in-out forwards;
+            animation: blockAnimation calc(var(--animationDuration) * 2) var(--animationDuration) ease-in forwards;
         }
 
         &:nth-of-type(2){
-            animation: blockAnimation calc(var(--animationDuration) * 2) calc(var(--animationDuration) * 2) ease-in-out forwards;
+            animation: blockAnimation calc(var(--animationDuration) * 2) calc(var(--animationDuration) * 2) ease-in forwards;
         }
 
         &:nth-of-type(3){
-            animation: blockAnimation calc(var(--animationDuration) * 2) calc(var(--animationDuration) * 3) ease-in-out forwards;
+            animation: blockAnimation calc(var(--animationDuration) * 2) calc(var(--animationDuration) * 3) ease-in forwards;
         }
     }
 

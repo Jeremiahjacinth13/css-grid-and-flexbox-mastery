@@ -30,12 +30,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  --animationDuration: 700ms;
+  --animationDuration: 500ms;
 }
 
 .container .block {
   height: inherit;
-  background-color: darkgreen;
+  background-color: darkblue;
   -ms-flex-preferred-size: 33.33%;
       flex-basis: 33.33%;
 }
@@ -133,3 +133,9 @@ body {
   }
 }
 /*# sourceMappingURL=styles.css.map */
+
+#forwardAnimation:checked ~ .block{
+  background-color: darkblue;
+  --animationDuratio: 500ms;
+  animation: blockAnimation calc(var(--animationDuration) * 2) var(--animationDuration) ease-in-out forwards reverse;
+}

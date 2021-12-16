@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes translateX {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes perspectiveorigin {
+    from{
+        perspective-origin: 50px 100px;
+    }    
+    to{
+        perspective-origin: 50px 0px;
+    }
+}
+
+.container{
+    perspective: 200px;
+    position: relative;
+    margin: 10em auto;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    perspective-origin: 50px 50px;
+    /* animation: perspectiveorigin 2s linear infinite alternate-reverse; */
+    
+}
+.side
+{
+    position: absolute;
+
+    height: 100px;
+    width: 100px;
+    background-color: #f004;
+
+    transform-origin: center;
+    transform: rotateX(90deg);
+    border-radius: 50%;
+    animation: translateX 2s linear forwards;
+    margin: auto;
+}

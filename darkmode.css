@@ -1,0 +1,131 @@
+
+html, html.light{
+
+  /* Variables */
+  
+    /* theme-related variables */
+  --primaryColor: #30d11b;
+  --buttonColor: #4bbce2;
+  --backgroundColor: #eeeeee;
+  --textColor: rgb(39, 39, 39);
+  --shadow: 0px 5px 10px 10px #afaeae52;
+   
+   /* non-theme-related variables */
+  --hoverOpacity: 0.7;
+  --padding: 1.5em 1em;
+
+  color-scheme: light dark;
+}
+
+body{
+  font-family: sans-serif; 
+}
+
+
+html.dark{
+  --primaryColor: green;
+    --buttonColor: blue;
+    --backgroundColor: #333;
+    --shadow: 0px 5px 10px 10px #24242461;
+    --textColor: rgb(236, 236, 236);
+}
+
+@media (prefers-color-scheme:dark){
+  html{
+    --primaryColor: green;
+    --buttonColor: blue;
+    --backgroundColor: #333;
+    --shadow: 0px 5px 10px 10px #24242461;
+    --textColor: rgb(221, 221, 221);
+  }
+}
+
+body{
+  background-color: var(--backgroundColor);
+}
+
+button{
+  background-color: var(--buttonColor);
+  padding: 1.5em;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  outline: none;
+  border: none;
+  color: var(--textColor);
+}
+h1, h2, h3, h4, h5, h6, p{
+  color: var(--textColor);
+}
+
+
+/* How to i attack this challenge */
+
+/* 
+
+  Assuming I have a color palette, and would like to swap this color palette based on the user's theme
+  say I have a green primary color, and would like to change the primary color to blue of the user is on dark mode,
+  whether thats the device's default theme or it was selected by the user, how would i do this with HTML, CSS and JS?
+
+
+  Using CSS variables to declare the values of the palette and then changing the variables when in a different theme
+  whether 
+ */
+
+ /* get the palette default values */
+ /* design with a default theme in mind (light or dark) */
+ /* set the color-scheme property on the html element */
+ /* add a media query for the other theme with the styles set appropriately */
+
+ /*
+ 
+     A very practical example:
+     Say we're building a landing page, we'd probably have the following values for the theme
+     --primaryColor, --buttonColor, --backgroundColor, --hoverOpacity, --shadow
+
+     ** Defining the default values;
+     
+     :root{
+
+      ** theme-related variables
+       --primaryColor: blue;
+       --buttonColor: lightblue;
+       --backgroundColor: lightgray;
+       --textColor: #111;
+       --shadow: 5px 5px 5px #eee3 ( slightly gray background with 30% opacity);
+       
+       ** non-theme-related variables
+       --hoverOpacity: 0.7;
+       --padding: 1.5em 1em;
+      }
+      
+    **Adding the color-scheme property to the html element
+
+     html{
+       color-scheme: light dark;
+     }
+
+     html.dark{
+       --primaryColor: green;
+       --buttonColor: hotpink;
+       --backgroundColor: black;
+       --shadow: 5px 5px 5px #3333;
+       --textColor: #efefef;
+     }
+
+     @media (prefers-color-scheme:dark){
+       --primaryColor: green;
+       --buttonColor: hotpink;
+       --backgroundColor: black;
+       --shadow: 5px 5px 5px #3333;
+     }
+
+     button{
+       background-color: var(--buttonColor);
+       padding: 1.5em;
+       border-radius: 20px;
+       box-shadow: var(--shadow);
+     }
+     h1, h2, h3, h4, h5, h6, p{
+       color: var(--textColor);
+     }
+  */
